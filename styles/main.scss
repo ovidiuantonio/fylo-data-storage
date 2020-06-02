@@ -62,16 +62,13 @@ body {
   }
 
   @media only screen and (max-width: 600px) {
-    height: 125vh;
-  }
-
-  @media only screen and (max-width: 350px) {
-    height: 140vh;
+    background-size: 150%;
   }
 }
 
 .content {
-  width: 100%;
+  width: 95%;
+  margin: auto;
   padding: 0 10%;
   display: flex;
   justify-content: space-around;
@@ -151,6 +148,7 @@ body {
   &:hover {
     background-color: var(--dark-blue);
     border: var(--very-dark-blue) 2px solid;
+    cursor: pointer;
   }
 }
 
@@ -170,6 +168,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    animation: barAnim 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   &__dot {
@@ -178,6 +178,16 @@ body {
     border-radius: 5rem;
     background-color: var(--pale-blue);
     margin-right: 0.2rem;
+  }
+}
+
+@keyframes barAnim {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 81.5%;
   }
 }
 

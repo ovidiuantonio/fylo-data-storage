@@ -86,18 +86,13 @@ body {
 
 @media only screen and (max-width: 600px) {
   body {
-    height: 125vh;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  body {
-    height: 140vh;
+    background-size: 150%;
   }
 }
 
 .content {
-  width: 100%;
+  width: 95%;
+  margin: auto;
   padding: 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,6 +202,7 @@ body {
 .icon-box:hover {
   background-color: var(--dark-blue);
   border: var(--very-dark-blue) 2px solid;
+  cursor: pointer;
 }
 
 .bar {
@@ -231,6 +227,8 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-animation: barAnim 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: barAnim 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .bar__dot {
@@ -239,6 +237,24 @@ body {
   border-radius: 5rem;
   background-color: var(--pale-blue);
   margin-right: 0.2rem;
+}
+
+@-webkit-keyframes barAnim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 81.5%;
+  }
+}
+
+@keyframes barAnim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 81.5%;
+  }
 }
 
 .capacity {
